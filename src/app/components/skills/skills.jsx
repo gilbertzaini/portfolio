@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaGitlab } from "react-icons/fa";
 import {
   FaHtml5,
@@ -18,82 +18,145 @@ import {
   SiNextdotjs,
   SiMysql,
 } from "react-icons/si";
+import { TbSql } from "react-icons/tb";
 import "./skills.css";
 
 export const Skills = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth / 16 < 64) setIsMobile(true);
+    else setIsMobile(false);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+  }, []);
+
   const skillItems = [
     {
       logo: <FaHtml5 fill="#f16529" />,
       name: "HTML",
+      category: "Language",
     },
     {
       logo: <FaCss3 fill="#1aa5df" />,
       name: "CSS",
+      category: "Language",
     },
     {
       logo: <BiLogoJavascript fill="#f7e025" />,
       name: "JavaScript",
+      category: "Language",
     },
     {
       logo: <BiLogoTypescript fill="#087ece" />,
       name: "TypeScript",
+      category: "Language",
     },
     {
       logo: <FaPhp fill="#4c83c3" />,
       name: "PHP",
+      category: "Language",
+    },
+    {
+      logo: <TbSql />,
+      name: "SQL",
+      category: "Language",
     },
     {
       logo: <FaReact fill="#50d6ff" />,
       name: "React.js",
-    },
-    {
-      logo: <FaAngular fill="#c50836" />,
-      name: "Angular",
-    },
-    {
-      logo: <FaLaravel fill="#ff3326" />,
-      name: "Laravel",
+      category: "Framework",
     },
     {
       logo: <SiNextdotjs fill="#080808" />,
       name: "Next.js",
+      category: "Framework",
     },
     {
-      logo: <SiMysql fill="#00608c" />,
-      name: "MySQL",
+      logo: <FaAngular fill="#c50836" />,
+      name: "Angular",
+      category: "Framework",
+    },
+    {
+      logo: <FaLaravel fill="#ff3326" />,
+      name: "Laravel",
+      category: "Framework",
     },
     {
       logo: <SiExpress fill="#4f4f4f" />,
       name: "Express.js",
+      category: "Framework",
     },
     {
       logo: <SiFlask fill="#0a0a0a" />,
       name: "Flask",
+      category: "Framework",
     },
-    {
-      logo: <SiArduino fill="#0c8c97" />,
-      name: "Arduino",
-    },
+    // {
+    //   logo: <SiArduino fill="#0c8c97" />,
+    //   name: "Arduino",
+    // },
     {
       logo: <FaGithub fill="#0c0f0f" />,
       name: "GitHub",
+      category: "Tools",
     },
     {
       logo: <FaGitlab fill="#e34930" />,
       name: "GitLab",
+      category: "Tools",
     },
   ];
+
+  let languageArr = [];
+  let frameworkArr = [];
+  let toolsArr = [];
+
+  skillItems.forEach((item) => {
+    const frag = (
+      <div className="logo-wrapper flex flex-col justify-center items-center py-2">
+        {item.logo}
+        <div className="logo-text">{item.name}</div>
+      </div>
+    );
+
+    if (item.category === "Language") languageArr.push(frag);
+    else if (item.category === "Framework") frameworkArr.push(frag);
+    else toolsArr.push(frag);
+  });
 
   return (
     <section>
       <h1 className="text-center my-5">Skills</h1>
-      <div className="logo-container flex flex-wrap justify-around items-center gap-8 px-3">
-        {skillItems.map((item) => (
-          <div className="logo-wrapper flex flex-col justify-center items-center py-2">
-            {item.logo}
-            <div className="logo-text">{item.name}</div>
-          </div>
-        ))}
+      <div className="logo-container flex lg:flex-col flex-wrap justify-around items-center gap-8 px-5 sm:px-14">
+        {isMobile ? (
+          <>
+            {skillItems.map((item, index) => (
+              <div
+                key={index}
+                className="logo-wrapper flex flex-col justify-center items-center py-2"
+              >
+                {item.logo}
+                <div className="logo-text">{item.name}</div>
+              </div>
+            ))}
+          </>
+        ) : (
+          <>
+            <div className="logo-category-container flex justify-between items-center gap-8">
+              {languageArr}
+            </div>
+            <div className="logo-category-container flex justify-between items-center gap-8">
+              {frameworkArr}
+            </div>
+            <div className="logo-category-container flex justify-between items-center gap-8">
+              {toolsArr}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

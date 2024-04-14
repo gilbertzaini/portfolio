@@ -1,11 +1,15 @@
-/* .logo-container {
+.logo-container {
     min-height: 80vh;
+}
+
+/* .logo-category-container {
+
 } */
 
 .logo-wrapper {
   background: var(--off-white);
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 6.5rem;
+  height: 6.5rem;
   border-radius: 12pt;
 
   box-shadow: 0px 10px 16px -1px var(--border-color);
@@ -13,13 +17,29 @@
 
 .logo-wrapper svg {
   background: var(--off-white);
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   object-fit: contain;
 }
 
 .logo-text {
   padding-top: 2px;
-  font-size: 8pt;
+  font-size: 9pt;
   color: var(--text-secondary);
+}
+
+@media screen and (max-width: 48rem) {
+  .logo-wrapper {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .logo-wrapper svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .logo-text {
+    font-size: 8pt;
+  }
 }
