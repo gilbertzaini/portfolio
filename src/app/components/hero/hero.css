@@ -1,0 +1,10 @@
+.icons-btn {
+  background: transparent;
+  border: 0px;
+  padding: 0;
+  font-size: 3.5vh;
+}
+
+.icons-btn:hover {
+  background: transparent;
+}
