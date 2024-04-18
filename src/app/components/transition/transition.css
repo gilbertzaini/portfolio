@@ -1,0 +1,8 @@
+.transition-container {
+    background: linear-gradient(var(--bg-primary), var(--bg-secondary)) !important;
+    position: relative;
+}
+
+.inverse {
+    background: linear-gradient(var(--bg-secondary), var(--bg-primary)) !important;
+}

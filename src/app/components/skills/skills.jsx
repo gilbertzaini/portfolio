@@ -146,13 +146,13 @@ export const Skills = () => {
           </>
         ) : (
           <>
-            <div className="logo-category-container flex justify-between items-center gap-8">
+            <div data-aos="fade-down" className="logo-category-container flex justify-between items-center gap-8">
               {languageArr}
             </div>
-            <div className="logo-category-container flex justify-between items-center gap-8">
+            <div data-aos="fade-down" className="logo-category-container flex justify-between items-center gap-8">
               {frameworkArr}
             </div>
-            <div className="logo-category-container flex justify-between items-center gap-8">
+            <div data-aos="fade-down" className="logo-category-container flex justify-between items-center gap-8">
               {toolsArr}
             </div>
           </>

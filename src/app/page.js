@@ -1,33 +1,26 @@
 "use client";
 
-import LocomotiveScroll from "locomotive-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import "locomotive-scroll/dist/locomotive-scroll.css";
+import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import { Hero } from "./components/hero/hero";
 import { Projects } from "./components/projects/projects";
 import { Skills } from "./components/skills/skills";
+import { Transition } from "./components/transition/transition";
 
 export default function Home() {
   useEffect(() => {
-    // const locomotiveScroll = new LocomotiveScroll({
-    // el: document.querySelector("[data-scroll-container]"),
-    // smooth: true,
-    // Add any other options you need
-    // });
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
-    // locomotiveScroll.init();
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
 
     AOS.init({
       duration: 1300,
       once: false,
     });
-
-    // Clean up function
-    // return () => {
-    //   locomotiveScroll.destroy();
-    // };
   }, []);
 
   return (
@@ -83,8 +76,10 @@ export default function Home() {
         </div>
       </section> */}
       <Hero />
-      <Projects/>
-      <Skills/>
+      <Transition text={"EXPERIENCES"} />
+      <Projects />
+      <Transition text={"EXPERIENCES"} inverse={true} />
+      <Skills />
     </div>
   );
 }

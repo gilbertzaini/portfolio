@@ -1,5 +1,4 @@
 import React from "react";
-import avatar from "../../assets/1.jpg";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 import Image from "next/image";
@@ -38,7 +37,7 @@ export const Hero = () => {
         </div>
       </div>
       <div id="avatar" className="flex justify-center items-center">
-        <Image src={avatar} width={500} height={500} alt="avatar" />
+        <Image src={"/assets/1.jpg"} width={500} height={500} alt="avatar" />
         {/* <img src='../../assets/avatar.png' alt="avatar" /> */}
       </div>
     </section>

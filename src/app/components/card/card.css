@@ -10,6 +10,7 @@
 }
 
 .card-img-wrapper {
+  position: relative;
   width: inherit;
   height: 16rem;
 }

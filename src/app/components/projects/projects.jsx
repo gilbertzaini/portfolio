@@ -1,4 +1,4 @@
-import placeholderImg from "../../assets/1.jpg";
+// import '/assets/1.jpg' from "../../../../public/assets/1.jpg"
 import React from "react";
 import { Card } from "../card/card";
 import Image from "next/image";
@@ -7,42 +7,42 @@ export const Projects = () => {
   const cardItems = [
     
     {
-      src: placeholderImg,
+      src: '/assets/1.jpg',
       heading: "DiTag",
       text: "Lorem ipsum dolor sit amet.",
       position: "Full Stack Developer",
       type: "Project"
     },
     {
-      src: placeholderImg,
+      src: '/assets/1.jpg',
       heading: "Nema-APP",
       text: "Lorem ipsum dolor sit amet.",
       position: "Back-end Developer",
       type: "Project"
     },
     {
-      src: placeholderImg,
+      src: '/assets/1.jpg',
       heading: "SIKEBAS",
       text: "Lorem ipsum dolor sit amet.",
       position: "Full Stack Developer",
       type: "Project"
     },
     {
-      src: placeholderImg,
+      src: '/assets/1.jpg',
       heading: "PT. Kurnia Ciptamoda Gemilang",
       text: "Lorem ipsum dolor sit amet.",
       position: "Front-end Developer Intern",
       type: "Experience"
     },
     {
-      src: placeholderImg,
+      src: '/assets/1.jpg',
       heading: "Serah Tahunan UMN 2023",
       text: "Lorem ipsum dolor sit amet.",
       position: "Lead Full Stack Developer",
       type: "Experience"
     },
     {
-      src: placeholderImg,
+      src: '/assets/1.jpg',
       heading: "Mr. & Ms. UMN 2023",
       text: "Lorem ipsum dolor sit amet.",
       position: "Front-end Developer",
