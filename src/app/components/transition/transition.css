@@ -1,8 +1,107 @@
 .transition-container {
-    background: linear-gradient(var(--bg-primary), var(--bg-secondary)) !important;
-    position: relative;
+  background: linear-gradient(
+    var(--bg-primary),
+    var(--bg-secondary)
+  ) !important;
+  position: relative;
+  height: 100vh;
 }
 
 .inverse {
-    background: linear-gradient(var(--bg-secondary), var(--bg-primary)) !important;
+  background: linear-gradient(
+    var(--bg-secondary),
+    var(--bg-primary)
+  ) !important;
+}
+.transition-container > div {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.transition-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  font-size: 20vh;
+}
+
+.bar {
+    margin-top: -5%;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--dark-color);
+}
+
+.bar > p {
+  font-size: 8vh;
+  color: var(--bg-primary);
+}
+
+.bar:nth-child(1) {
+  rotate: 130deg;
+}
+
+.bar:nth-child(2) {
+  rotate: 220deg;
+}
+
+.bar:nth-child(3) {
+  rotate: 180deg;
+}
+
+.bar:nth-child(4) {
+  rotate: 245deg;
+}
+
+.bar:nth-child(5) {
+  rotate: 90;
+}
+
+.bar:nth-child(6) {
+  rotate: 315deg;
+}
+
+.bar:nth-child(7) {
+  rotate: 125deg;
+}
+
+.bar:nth-child(8) {
+  rotate: 145deg;
+}
+
+.bar:nth-child(9) {
+  rotate: 170deg;
+}
+
+.bar:nth-child(10) {
+  rotate: 200deg;
+}
+
+.bar:nth-child(11) {
+  rotate: 235deg;
+}
+
+.bar:nth-child(12) {
+  rotate: 123deg;
+}
+
+.bar:nth-child(13) {
+  rotate: 243deg;
+}
+
+.bar:nth-child(14) {
+  rotate: 312deg;
+}
+
+.bar:nth-child(15) {
+  rotate: 300deg;
 }
