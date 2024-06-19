@@ -60,7 +60,7 @@ const Showcase = (data) => {
 
         <div className="showcase-right-bar flex flex-col lg:py-5 w-full lg:w-3/12">
           <Swiper
-            className="showcase-option w-full h-1/6 mb-2 lg:mb-5"
+            className="showcase-option w-full h-1/6"
             slidesPerView={1.5}
             spaceBetween={10}
           >
@@ -84,17 +84,17 @@ const Showcase = (data) => {
             ))}
           </Swiper>
 
-          <div className="showcase-desc ps-3">
-            <h4>{items[selected].heading}</h4>
-            <h5>{items[selected].position}</h5>
+          <div className="showcase-desc ps-3 pt-3 lg:pt-5">
+            <h4 className="text-2xl lg:text-3xl">{items[selected].heading}</h4>
+            <h5 className="text-sm lg:text-base">{items[selected].position}</h5>
             <div className="flex my-3 align-center gap-3">
               {items[selected].stack.map((item, index) => (
-                <div className="stack-wrapper" key={index}>
+                <div className="stack-wrapper text-xl lg:text-3xl" key={index}>
                   {item}
                 </div>
               ))}
             </div>
-            <p>{items[selected].text}</p>
+            <p className="text-xs lg:text-base">{items[selected].text}</p>
           </div>
         </div>
       </div>
