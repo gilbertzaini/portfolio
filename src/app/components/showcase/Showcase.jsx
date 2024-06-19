@@ -19,7 +19,16 @@ const Showcase = (data) => {
 
       <div className="showcase-container flex flex-col lg:flex-row align-center justify-center">
         <div className="showcase-slider w-full lg:w-9/12 rounded-xl flex align-center">
+          <div className="showcase-swiper-logo hidden lg:block">
+            <Image
+              src={items[selected].src}
+              alt={items[selected].heading}
+              layout="fill"
+              objectFit="contain"
+            ></Image>
+          </div>
           <Swiper
+          className="w-11/12 lg:w-3/4 h-3/4"
             slidesPerView={1}
             loop={true}
             pagination={{ clickable: true }}
@@ -36,15 +45,6 @@ const Showcase = (data) => {
               },
             }}
           >
-            <SwiperSlide>
-              <Image
-                className="object-contain w-full h-full"
-                src={items[selected].src}
-                alt={items[selected].heading}
-                layout="fill"
-                objectFit="contain"
-              ></Image>
-            </SwiperSlide>
             {items[selected].screenshots.map((item, index) => (
               <SwiperSlide key={index}>
                 <Image
