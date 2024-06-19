@@ -37,7 +37,10 @@ export const Hero = () => {
         </div>
       </div>
       <div id="avatar" className="flex justify-center items-center">
-        <Image src={"/assets/1.jpg"} width={500} height={500} className="rounded-full" alt="avatar" />
+        <img
+          src={"/assets/avatar.png"}
+          alt="avatar"
+        />
         {/* <img src='../../assets/avatar.png' alt="avatar" /> */}
       </div>
     </section>
