@@ -3,19 +3,7 @@ import "./transition.css";
 
 export const Transition = ({ text, inverse }) => {
   const container = useRef(null);
-  // const rotations = [130, 220, 80, 45, 100, 115, 125, 145, 170, 200];
-  const bars = Array.from({ length: 10 }, (_, index) => (
-    <div
-      className="bar"
-      data-scroll
-      data-scroll-speed="0.8"
-      data-scroll-direction="horizontal"
-      key={index}
-      // style={{ transform: `rotate(${rotations[index]}deg)` }}
-    >
-      <p>{text}</p>
-    </div>
-  ));
+  const rotations = [0, 20, 40, 60, 80, 90, 110, 130, 150, 170, 190, 210, 230, 250, 180];
 
   return (
     <section
@@ -23,7 +11,20 @@ export const Transition = ({ text, inverse }) => {
       className={`transition-container ${inverse ? "inverse" : ""}`}
     >
       <h1 className="transition-bg">{text}</h1>
-      <div>{bars}</div>
+      <div>
+        {rotations.map((val, index) => (
+          <div
+            key={index}
+            className="bar"
+            data-scroll
+            data-scroll-speed="1.3"
+            data-scroll-direction="horizontal"
+            // style={{ transform: `rotate(${val}deg)` }}
+          >
+            <p>{text}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
