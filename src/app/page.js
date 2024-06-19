@@ -3,10 +3,11 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Hero } from "./components/hero/hero";
-import { Projects } from "./components/projects/projects";
-import { Skills } from "./components/skills/skills";
-import { Transition } from "./components/transition/transition";
+import { Hero } from "./components/hero/Hero";
+import { Projects } from "./components/projects/Projects";
+import { Skills } from "./components/skills/Skills";
+import { Transition } from "./components/transition/Transition";
+import Experiences from "./components/experiences/Experiences";
 
 export default function Home() {
   useEffect(() => {
@@ -26,6 +27,10 @@ export default function Home() {
     <div>
       <Hero />
       <Transition text={"EXPERIENCES"} />
+      <Experiences />
+      <Transition text={"PROJECTS"} inverse={true}/>
+      <Projects />
+      <Transition text={"ORGANIZATIONS"} />
       <Projects />
       <Transition text={"SKILLS"} inverse={true} />
       <Skills />
