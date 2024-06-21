@@ -56,7 +56,7 @@ const Showcase = (data) => {
           </Swiper>
         </div>
 
-        <div className="showcase-right-bar flex flex-col my-auto h-full mb-3 lg:mb-0 lg:h-5/6 lg:py-5 w-full lg:w-3/12">
+        <div className="showcase-right-bar flex flex-col h-full mb-3 lg:mb-0 lg:h-5/6 lg:py-5 w-full lg:w-3/12">
           <Swiper
             className="showcase-option w:1/2 lg:w-full h-1/6 mt-4 lg:mt-0"
             slidesPerView={1.5}
