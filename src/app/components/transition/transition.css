@@ -1,17 +1,13 @@
 .transition-container {
-  background: linear-gradient(
-    var(--bg-primary),
-    var(--bg-secondary)
-  ) !important;
+  /* background: linear-gradient(var(--bg-primary), var(--dark-color)) !important; */
+  background: linear-gradient(var(--bg-primary), var(--bg-secondary)) !important;
   position: relative;
   height: 100vh;
 }
 
 .inverse {
-  background: linear-gradient(
-    var(--bg-secondary),
-    var(--bg-primary)
-  ) !important;
+  /* background: linear-gradient(var(--dark-color), var(--bg-primary)) !important; */
+  background: linear-gradient(var(--bg-secondary), var(--bg-primary)) !important;
 }
 
 .transition-container > div {

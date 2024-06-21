@@ -1,12 +1,9 @@
 import React, { useRef } from "react";
-import "./transition.css";
+import "./Transition.css";
 
 export const Transition = ({ text, inverse }) => {
-  const container = useRef(null);
-
   return (
     <section
-      ref={container}
       className={`transition-container ${inverse ? "inverse" : ""}`}
     >
       <h1 className="transition-bg">{text}</h1>
