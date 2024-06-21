@@ -17,7 +17,10 @@ const Showcase = (data) => {
 
       <div className="showcase-container flex flex-col lg:flex-row align-center justify-center">
         <div className="showcase-slider h-full w-full lg:w-9/12 rounded-xl flex align-center">
-          <div className="showcase-swiper-logo hidden lg:block">
+          <div
+            data-aos="zoom-out"
+            className="showcase-swiper-logo hidden lg:block"
+          >
             <Image
               src={items[selected].src}
               alt={items[selected].heading}
