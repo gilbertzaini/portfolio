@@ -10,6 +10,7 @@ import Image from "next/image";
 const Showcase = (data) => {
   const items = data.data;
   const [selected, setSelected] = useState(0);
+  const [selectionSwiper, setSelectionSwiper] = useState(null);
 
   return (
     <section>
@@ -25,7 +26,7 @@ const Showcase = (data) => {
               src={items[selected].src}
               alt={items[selected].heading}
               fill="true"
-              style={{objectFit: "contain"}}
+              style={{ objectFit: "contain" }}
             ></Image>
           </div>
           <Swiper
@@ -52,7 +53,7 @@ const Showcase = (data) => {
                   src={item}
                   alt={`${items[selected].heading} - ${index}`}
                   fill="true"
-                  style={{objectFit: "contain"}}
+                  style={{ objectFit: "contain" }}
                 />
               </SwiperSlide>
             ))}
@@ -62,30 +63,31 @@ const Showcase = (data) => {
         <div className="showcase-right-bar flex flex-col h-full mb-3 lg:mb-0 lg:h-5/6 lg:py-5 w-full lg:w-3/12">
           <Swiper
             className="showcase-option w:1/2 lg:w-full h-1/6 mt-4 lg:mt-0"
-            slidesPerView={1.5}
+            slidesPerView={2.5}
             spaceBetween={20}
             slidesOffsetBefore={5}
             slidesOffsetAfter={20}
+            onSwiper={setSelectionSwiper}
+            onSlideChange={() => {
+              setSelected(selectionSwiper.activeIndex);
+            }}
+            centeredSlides={true}
           >
             {items.map((item, index) => (
               <SwiperSlide key={index}>
                 <button
                   className="showcase-option-item h-full w-full"
                   onClick={() => {
+                    selectionSwiper.slideTo(index);
                     setSelected(index);
                   }}
-                  disabled={item.heading === "Coming Soon"}
                 >
-                  {item.src !== "" ? (
-                    <Image
-                      src={item.src}
-                      alt={item.heading}
-                      fill="true"
-                      style={{objectFit: "contain"}}
-                    />
-                  ) : (
-                    <p>Soon</p>
-                  )}
+                  <Image
+                    src={item.src}
+                    alt={item.heading}
+                    fill="true"
+                    style={{ objectFit: "contain" }}
+                  />
                 </button>
               </SwiperSlide>
             ))}

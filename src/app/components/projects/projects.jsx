@@ -1,7 +1,13 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
 import { FaLaravel, FaReact } from "react-icons/fa6";
-import { SiChakraui, SiExpress, SiFlask, SiMysql } from "react-icons/si";
+import {
+  SiArduino,
+  SiChakraui,
+  SiExpress,
+  SiFlask,
+  SiMysql,
+} from "react-icons/si";
 import { BsBootstrapFill } from "react-icons/bs";
 import Showcase from "../showcase/Showcase";
 
@@ -12,8 +18,14 @@ export const Projects = () => {
       heading: "DiTag",
       text: "Lorem ipsum dolor sit amet.",
       position: "Full Stack Developer",
-      stack: [<FaReact />, <SiChakraui />, <SiExpress />, <SiMysql />],
-      screenshots: []
+      stack: [
+        <SiArduino />,
+        <FaReact />,
+        <SiChakraui />,
+        <SiExpress />,
+        <SiMysql />,
+      ],
+      screenshots: [],
     },
     {
       src: "/assets/1.jpg",
@@ -21,7 +33,7 @@ export const Projects = () => {
       text: "Lorem ipsum dolor sit amet.",
       position: "Back-end Developer",
       stack: [<SiFlask />],
-      screenshots: []
+      screenshots: [],
     },
     {
       src: "/assets/1.jpg",
@@ -29,7 +41,7 @@ export const Projects = () => {
       text: "Lorem ipsum dolor sit amet.",
       position: "Full Stack Developer",
       stack: [<FaLaravel />, <BsBootstrapFill />, <SiMysql />],
-      screenshots: []
+      screenshots: [],
     },
   ];
 

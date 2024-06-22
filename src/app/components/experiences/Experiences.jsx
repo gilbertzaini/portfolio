@@ -19,15 +19,7 @@ const Experiences = () => {
         "/assets/experiences/kcg/2.png",
         "/assets/experiences/kcg/3.png",
       ],
-    },
-    // {
-    //   src: "",
-    //   heading: "Coming Soon",
-    //   text: ".",
-    //   position: "",
-    //   stack: [],
-    //   screenshots: [],
-    // },
+    }
   ];
 
   return (
