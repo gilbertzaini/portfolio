@@ -92,3 +92,8 @@ ul {
   height: 45vh;
   overflow-y: auto;
 }
+
+.showcase-period {
+  border-radius: 12px;
+  background: var(--overlay-color);
+}

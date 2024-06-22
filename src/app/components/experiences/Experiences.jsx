@@ -13,7 +13,11 @@ const Experiences = () => {
       heading: "PT. Kurnia Ciptamoda Gemilang",
       text: (
         <>
-          <p>As a web developer intern, I was tasked to take part in migrating the original KCG System, which is a desktop-based ERP System, into a web-based application. In my internship period, I:</p>
+          <p>
+            As a web developer intern, I was tasked to take part in migrating
+            the original KCG System, which is a desktop-based ERP System, into a
+            web-based application. In my internship period, I:
+          </p>
           <ul>
             <li>
               {" "}
@@ -29,6 +33,7 @@ const Experiences = () => {
         </>
       ),
       position: "Web Developer Intern",
+      period: "Feb - Jun 2024",
       stack: [<FaAngular />, <BsBootstrapFill />, <SiExpress />, <SiMysql />],
       screenshots: [
         "/assets/experiences/kcg/1.png",

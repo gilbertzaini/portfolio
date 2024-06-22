@@ -39,6 +39,7 @@ export const Projects = () => {
         </>
       ),
       position: "Software Developer",
+      period: "Jan 2024 - Present",
       stack: [<FaReact />, <SiChakraui />, <SiTensorflow />],
       screenshots: [
         "/assets/projects/MySalak/1.jpeg",
@@ -74,6 +75,7 @@ export const Projects = () => {
         </>
       ),
       position: "Back-end Developer",
+      period: "Nov 2023 - Jan 2024",
       stack: [<SiFlask />],
       screenshots: [
         "/assets/projects/NemaApp/1.png",
@@ -114,6 +116,7 @@ export const Projects = () => {
         </>
       ),
       position: "Full Stack IoT Developer",
+      period: "Sep - Dec 2023",
       stack: [
         <SiArduino />,
         <FaReact />,
@@ -158,6 +161,7 @@ export const Projects = () => {
         </>
       ),
       position: "Full Stack Developer",
+      period: "Jun - Nov 2023",
       stack: [<FaLaravel />, <BsBootstrapFill />, <SiMysql />],
       screenshots: [
         "/assets/projects/SIKEBAS/1.png",

@@ -40,6 +40,7 @@ const Organization = () => {
         </>
       ),
       position: "Lead Web Developer",
+      period: "May - Dec 2023",
       stack: [<FaReact />, <SiChakraui />, <SiExpress />, <SiMysql />],
       screenshots: [
         "/assets/organizations/stukm/1.png",
@@ -50,6 +51,7 @@ const Organization = () => {
     {
       src: "/assets/organizations/mrms/logo.png",
       heading: "Mr. & Ms. UMN 2023",
+      period: "Mar - Nov 2023",
       text: (
         <>
         <p>Mr. & Ms. UMN is an annual event held by Multimedia Nusantara University that involves the selection of university ambassadors. As a web developer, I:</p>
