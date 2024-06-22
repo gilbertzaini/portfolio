@@ -7,20 +7,27 @@ import Showcase from "../showcase/Showcase";
 const Organization = () => {
   const organizations = [
     {
-      src: "/assets/1.jpg",
+      src: "/assets/organizations/stukm/logo.png",
       heading: "Serah Tahunan UMN 2023",
       text: "Lorem ipsum dolor sit amet.",
       position: "Lead Web Developer",
       stack: [<FaReact />, <SiChakraui />, <SiExpress />, <SiMysql />],
-      screenshots: [],
+      screenshots: [
+        "/assets/organizations/stukm/1.png",
+        "/assets/organizations/stukm/2.png",
+        "/assets/organizations/stukm/3.png",
+      ],
     },
     {
-      src: "/assets/1.jpg",
+      src: "/assets/organizations/mrms/logo.png",
       heading: "Mr. & Ms. UMN 2023",
       text: "Lorem ipsum dolor sit amet.",
       position: "Front-end Developer",
       stack: [<SiNextdotjs />, <SiChakraui />],
-      screenshots: [],
+      screenshots: [
+        "/assets/organizations/mrms/1.png",
+        "/assets/organizations/mrms/2.png",
+      ],
     },
   ];
 

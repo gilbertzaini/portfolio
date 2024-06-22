@@ -18,6 +18,9 @@ const Experiences = () => {
         "/assets/experiences/kcg/1.png",
         "/assets/experiences/kcg/2.png",
         "/assets/experiences/kcg/3.png",
+        "/assets/experiences/kcg/4.png",
+        "/assets/experiences/kcg/5.png",
+        "/assets/experiences/kcg/6.png",
       ],
     }
   ];

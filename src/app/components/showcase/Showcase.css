@@ -31,11 +31,6 @@
   z-index: 100;
 }
 
-.showcase-swiper-logo > img {
-  border-radius: 50%;
-  background: transparent;
-}
-
 .showcase-desc h4 {
   color: var(--bg-primary);
   font-weight: bold;

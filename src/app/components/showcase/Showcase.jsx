@@ -26,7 +26,11 @@ const Showcase = (data) => {
               src={items[selected].src}
               alt={items[selected].heading}
               fill="true"
-              style={{ objectFit: "contain" }}
+              style={{
+                objectFit: "contain",
+                borderRadius: "50%",
+                background: "transparent",
+              }}
             ></Image>
           </div>
           <Swiper
@@ -71,7 +75,6 @@ const Showcase = (data) => {
             onSlideChange={() => {
               setSelected(selectionSwiper.activeIndex);
             }}
-            centeredSlides={true}
           >
             {items.map((item, index) => (
               <SwiperSlide key={index}>
