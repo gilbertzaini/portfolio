@@ -54,10 +54,21 @@
 
 body {
   background: var(--bg-primary);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .secondary-bg {
-  background: var(--bg-secondary);
+  background: var(--bg-secondary) !important;
+}
+
+.secondary-bg > section {
+  background: var(--bg-secondary) !important;
 }
 
 h1 {
@@ -107,12 +118,23 @@ button:hover {
   /* color: var(--text-primary); */
 }
 
+#dark-mode-button {
+  background: transparent;
+  border: 0px;
+}
+
+#dark-mode-button:hover {
+  transform: none;
+  background: transparent;
+}
+
 section {
   height: fit-content;
   min-height: 100vh;
   overflow: hidden;
   /* padding: 2% 4%; */
   position: relative;
+  background: var(--bg-primary);
 }
 
 /* .transition-container {
@@ -124,3 +146,4 @@ section {
   position: "absolute";
   background: var(--accent-color);
 }
+

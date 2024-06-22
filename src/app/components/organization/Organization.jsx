@@ -2,6 +2,7 @@
 import React from "react";
 import { FaReact } from "react-icons/fa6";
 import { SiChakraui, SiExpress, SiMysql, SiNextdotjs } from "react-icons/si";
+import Showcase from "../showcase/Showcase";
 
 const Organization = () => {
   const organizations = [
@@ -11,19 +12,23 @@ const Organization = () => {
       text: "Lorem ipsum dolor sit amet.",
       position: "Lead Web Developer",
       stack: [<FaReact />, <SiChakraui />, <SiExpress />, <SiMysql />],
-      type: "Experience",
+      screenshots: [],
     },
     {
       src: "/assets/1.jpg",
       heading: "Mr. & Ms. UMN 2023",
       text: "Lorem ipsum dolor sit amet.",
       position: "Front-end Developer",
-      stack: [<SiNextdotjs/>, <SiChakraui />],
-      type: "Experience",
+      stack: [<SiNextdotjs />, <SiChakraui />],
+      screenshots: [],
     },
   ];
-  
-  return <div>Organization</div>;
+
+  return (
+    <div className="secondary-bg">
+      <Showcase data={organizations} title={"Organizations"} />{" "}
+    </div>
+  );
 };
 
 export default Organization;

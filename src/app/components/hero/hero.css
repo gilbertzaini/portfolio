@@ -15,14 +15,16 @@
   width: auto;
 }
 
-#avatar > img {
+#dark-mode-button > svg {
+  width: inherit;
+  height: inherit;
+}
+
+#avatar > div {
   border-radius: 50%;
   border: 8px solid var(--dark-color);
   box-shadow: 0px 10px 30px 7px var(--border-color);
 
   background: #f4f6f8;
-
-  width: 50vh;
-  height: 50vh;
   object-fit: contain;
 }

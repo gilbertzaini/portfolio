@@ -19,7 +19,7 @@ import {
   SiMysql,
 } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
-import "./skills.css";
+import "./Skills.css";
 
 export const Skills = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -115,9 +115,12 @@ export const Skills = () => {
   let frameworkArr = [];
   let toolsArr = [];
 
-  skillItems.forEach((item) => {
+  skillItems.forEach((item, index) => {
     const frag = (
-      <div className="logo-wrapper flex flex-col justify-center items-center py-2">
+      <div
+        key={index}
+        className="logo-wrapper flex flex-col justify-center items-center py-2"
+      >
         {item.logo}
         <div className="logo-text">{item.name}</div>
       </div>
@@ -146,13 +149,22 @@ export const Skills = () => {
           </>
         ) : (
           <>
-            <div data-aos="fade-down" className="logo-category-container flex justify-between items-center gap-8">
+            <div
+              data-aos="fade-down"
+              className="logo-category-container flex justify-between items-center gap-8"
+            >
               {languageArr}
             </div>
-            <div data-aos="fade-down" className="logo-category-container flex justify-between items-center gap-8">
+            <div
+              data-aos="fade-down"
+              className="logo-category-container flex justify-between items-center gap-8"
+            >
               {frameworkArr}
             </div>
-            <div data-aos="fade-down" className="logo-category-container flex justify-between items-center gap-8">
+            <div
+              data-aos="fade-down"
+              className="logo-category-container flex justify-between items-center gap-8"
+            >
               {toolsArr}
             </div>
           </>

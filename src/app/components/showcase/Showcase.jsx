@@ -24,8 +24,8 @@ const Showcase = (data) => {
             <Image
               src={items[selected].src}
               alt={items[selected].heading}
-              layout="fill"
-              objectFit="contain"
+              fill="true"
+              style={{objectFit: "contain"}}
             ></Image>
           </div>
           <Swiper
@@ -51,8 +51,8 @@ const Showcase = (data) => {
                 <Image
                   src={item}
                   alt={`${items[selected].heading} - ${index}`}
-                  layout="fill"
-                  objectFit="contain"
+                  fill="true"
+                  style={{objectFit: "contain"}}
                 />
               </SwiperSlide>
             ))}
@@ -80,8 +80,8 @@ const Showcase = (data) => {
                     <Image
                       src={item.src}
                       alt={item.heading}
-                      layout="fill"
-                      objectFit="contain"
+                      fill="true"
+                      style={{objectFit: "contain"}}
                     />
                   ) : (
                     <p>Soon</p>

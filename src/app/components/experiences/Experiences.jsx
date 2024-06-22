@@ -20,14 +20,14 @@ const Experiences = () => {
         "/assets/experiences/kcg/3.png",
       ],
     },
-    {
-      src: "",
-      heading: "Coming Soon",
-      text: ".",
-      position: "",
-      stack: [],
-      screenshots: [],
-    },
+    // {
+    //   src: "",
+    //   heading: "Coming Soon",
+    //   text: ".",
+    //   position: "",
+    //   stack: [],
+    //   screenshots: [],
+    // },
   ];
 
   return (
