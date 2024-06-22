@@ -97,3 +97,10 @@ ul {
   border-radius: 12px;
   background: var(--overlay-color);
 }
+
+
+@media screen and (max-width: 48rem) {
+  .showcase-detail {
+    height: 22vh;
+  }
+}

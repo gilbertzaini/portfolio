@@ -14,8 +14,6 @@ const Showcase = (data) => {
 
   return (
     <section>
-      {/* <h1 className="text-center my-5">{data.title}</h1> */}
-
       <div className="showcase-container flex flex-col lg:flex-row align-center justify-center">
         <div className="showcase-slider h-full w-full lg:w-9/12 rounded-xl flex align-center">
           <div
@@ -65,19 +63,19 @@ const Showcase = (data) => {
         </div>
 
         <div className="showcase-right-bar flex flex-col h-full mb-3 lg:mb-0 lg:h-5/6 lg:py-5 w-full lg:w-3/12">
-          <div className="ps-7 pe-3 mb-3">
-            <h4 className="text-xl lg:text-2xl pb-1">{items[selected].heading}</h4>
+          <div className="ps-7 pt-5 lg:pt-0 pe-3 lg:mb-3">
+            <h4 className="text-2xl pb-1">{items[selected].heading}</h4>
             <div className="flex justify-between align-center">
               <h5 className="text-sm lg:text-base">
                 {items[selected].position}
               </h5>
-              <div className="showcase-period flex align-center px-1">
-                <p className="text-sm my-auto">{items[selected].period}</p>
+              <div className="showcase-period flex align-center px-2 lg:px-3">
+                <p className="text-xs my-auto">{items[selected].period}</p>
               </div>
             </div>
           </div>
           <Swiper
-            className="showcase-option w:1/2 lg:w-full h-1/6 mt-4 lg:mt-0"
+            className="showcase-option w:1/2 lg:w-full h-1/6 mt-2 lg:mt-0"
             slidesPerView={2.5}
             spaceBetween={20}
             slidesOffsetBefore={5}
