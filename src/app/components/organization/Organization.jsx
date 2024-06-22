@@ -9,7 +9,36 @@ const Organization = () => {
     {
       src: "/assets/organizations/stukm/logo.png",
       heading: "Serah Tahunan UMN 2023",
-      text: "Lorem ipsum dolor sit amet.",
+      text: (
+        <>
+          <p>
+            Serah Tahunan is an event organized by the Student Executive Board
+            (BEM) to facilitate the transition of leadership roles among core
+            members within various student activity units. As a lead web developer, I:
+          </p>
+          <ul>
+            <li>
+              Initialized the website project using React.js, Express.js, and
+              ChakraUI
+            </li>
+            <li>
+              Coordinated the execution of the project within the team and with
+              other division
+            </li>
+            <li>
+              {" "}
+              Distributed the workload to the team members based on the
+              individual’s ability{" "}
+            </li>
+            <li>Developed the voting form and its related APIs</li>
+            <li>
+              {" "}
+              Handled the authentication, authorization, and session management{" "}
+            </li>
+            <li> Deployed the website using cPanel </li>
+          </ul>
+        </>
+      ),
       position: "Lead Web Developer",
       stack: [<FaReact />, <SiChakraui />, <SiExpress />, <SiMysql />],
       screenshots: [
@@ -21,7 +50,22 @@ const Organization = () => {
     {
       src: "/assets/organizations/mrms/logo.png",
       heading: "Mr. & Ms. UMN 2023",
-      text: "Lorem ipsum dolor sit amet.",
+      text: (
+        <>
+        <p>Mr. & Ms. UMN is an annual event held by Multimedia Nusantara University that involves the selection of university ambassadors. As a web developer, I:</p>
+        <ul>
+            <li>
+              {" "}
+              Developed sponsor and media partner pages layout{" "}
+            </li>
+            <li>
+              {" "}
+              Developed "Meet Our Candidates" section{" "}
+            </li>
+            <li>Developed the Gallery template </li>
+          </ul>
+        </>
+      ),
       position: "Front-end Developer",
       stack: [<SiNextdotjs />, <SiChakraui />],
       screenshots: [

@@ -11,7 +11,23 @@ const Experiences = () => {
     {
       src: "/assets/experiences/kcg/kcg.png",
       heading: "PT. Kurnia Ciptamoda Gemilang",
-      text: "Lorem ipsum dolor sit amet.",
+      text: (
+        <>
+          <p>As a web developer intern, I was tasked to take part in migrating the original KCG System, which is a desktop-based ERP System, into a web-based application. In my internship period, I:</p>
+          <ul>
+            <li>
+              {" "}
+              Migrated 12 menus from the legacy KCG system to the new web
+              application built with Angular{" "}
+            </li>
+            <li>
+              {" "}
+              Developed the back-end for KCG Helpdesk with Express.js and MySQL{" "}
+            </li>
+            <li> Took part in developing the front-end for KCG Helpdesk </li>
+          </ul>
+        </>
+      ),
       position: "Web Developer Intern",
       stack: [<FaAngular />, <BsBootstrapFill />, <SiExpress />, <SiMysql />],
       screenshots: [
@@ -22,7 +38,7 @@ const Experiences = () => {
         "/assets/experiences/kcg/5.png",
         "/assets/experiences/kcg/6.png",
       ],
-    }
+    },
   ];
 
   return (

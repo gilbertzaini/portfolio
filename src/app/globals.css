@@ -13,6 +13,7 @@
   --accent-color-light: #adb5bd;
   --dark-color-light: #343a40;
   --light-color-light: #495057;
+  --overlay-light: #f5f5f572;
 
   /* Dark mode colors */
   --bg-primary-dark: #212529;
@@ -24,6 +25,7 @@
   --accent-color-dark: #ced4da;
   --dark-color-dark: #adb5bd;
   --light-color-dark: #e9ecef;
+  --overlay-dark: #0000002f;
 
   /* Initial colors */
   --bg-primary: var(--bg-primary-light);
@@ -35,6 +37,7 @@
   --accent-color: var(--accent-color-light);
   --dark-color: var(--dark-color-light);
   --light-color: var(--light-color-light);
+  --overlay-color: var(--overlay-light);
 
   --off-white: rgba(255, 255, 255, 0.9);
 }
@@ -50,6 +53,7 @@
   --accent-color: var(--accent-color-dark);
   --dark-color: var(--dark-color-dark);
   --light-color: var(--light-color-dark);
+  --overlay-color: var(--overlay-dark);
 }
 
 body {
@@ -135,6 +139,11 @@ section {
   /* padding: 2% 4%; */
   position: relative;
   background: var(--bg-primary);
+}
+
+ul {
+  list-style: disc;
+  padding-left: 5%;
 }
 
 /* .transition-container {
