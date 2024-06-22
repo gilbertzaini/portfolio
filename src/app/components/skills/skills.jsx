@@ -8,6 +8,7 @@ import {
   FaReact,
   FaAngular,
   FaGithub,
+  FaPython,
 } from "react-icons/fa6";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import {
@@ -17,9 +18,14 @@ import {
   SiArduino,
   SiNextdotjs,
   SiMysql,
+  SiTailwindcss,
+  SiChakraui,
 } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
+import { BsBootstrapFill } from "react-icons/bs";
+import PythonLogo from "../icons/python-logo.svg";
 import "./Skills.css";
+import Image from "next/image";
 
 export const Skills = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -61,6 +67,11 @@ export const Skills = () => {
       category: "Language",
     },
     {
+      logo: <Image src={PythonLogo} alt="Python Logo" width="55" height="55" />,
+      name: "Python",
+      category: "Language",
+    },
+    {
       logo: <TbSql />,
       name: "SQL",
       category: "Language",
@@ -95,20 +106,36 @@ export const Skills = () => {
       name: "Flask",
       category: "Framework",
     },
+    {
+      logo: <SiArduino fill="#0c8c97" />,
+      name: "Arduino",
+      category: "Additional",
+    },
+    {
+      logo: <BsBootstrapFill fill="#8011f5" />,
+      name: "Bootstrap",
+      category: "Additional",
+    },
+    {
+      logo: <SiTailwindcss fill="#38bdf8" />,
+      name: "Tailwind",
+      category: "Additional",
+    },
+    {
+      logo: <SiChakraui fill="#60c9ca" />,
+      name: "ChakraUI",
+      category: "Additional",
+    },
     // {
-    //   logo: <SiArduino fill="#0c8c97" />,
-    //   name: "Arduino",
+    //   logo: <FaGithub fill="#0c0f0f" />,
+    //   name: "GitHub",
+    //   category: "Tools",
     // },
-    {
-      logo: <FaGithub fill="#0c0f0f" />,
-      name: "GitHub",
-      category: "Tools",
-    },
-    {
-      logo: <FaGitlab fill="#e34930" />,
-      name: "GitLab",
-      category: "Tools",
-    },
+    // {
+    //   logo: <FaGitlab fill="#e34930" />,
+    //   name: "GitLab",
+    //   category: "Tools",
+    // },
   ];
 
   let languageArr = [];
