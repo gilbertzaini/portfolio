@@ -38,7 +38,7 @@
 }
 
 .showcase-right-bar h5 {
-  color: var(--overlay-color);
+  color: var(--element-bg);
 }
 
 .showcase-right-bar p,
@@ -97,7 +97,6 @@ ul {
   border-radius: 12px;
   background: var(--overlay-color);
 }
-
 
 @media screen and (max-width: 48rem) {
   .showcase-detail {
