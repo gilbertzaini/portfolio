@@ -27,7 +27,7 @@ import PythonLogo from "../icons/python-logo.svg";
 import "./Skills.css";
 import Image from "next/image";
 
-export const Skills = () => {
+const Skills = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
@@ -200,3 +200,5 @@ export const Skills = () => {
     </section>
   );
 };
+
+export default Skills;

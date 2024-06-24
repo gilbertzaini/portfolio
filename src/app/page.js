@@ -3,34 +3,33 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { Hero } from "./components/hero/Hero";
-import { Projects } from "./components/projects/Projects";
-import { Skills } from "./components/skills/Skills";
-import { Transition } from "./components/transition/Transition";
+import Hero from "./components/hero/Hero";
+import Projects from "./components/projects/Projects";
+import Skills from "./components/skills/Skills";
+import Transition from "./components/transition/Transition";
 import Experiences from "./components/experiences/Experiences";
 import Organization from "./components/organization/Organization";
-// import LocomotiveScroll from "locomotive-scroll";
 
 export default function Home() {
-  // const locomotiveScroll = new LocomotiveScroll();
 
-  // AOS.init({
-  //   duration: 1300,
-  //   once: false,
-  // });
-  
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+    async function getLocomotive() {
+      console.log("importing...");
+      const Locomotive = (await import("locomotive-scroll")).default;
+      const scroll = new Locomotive({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      });
+      console.log("get");
+    }
 
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
+    getLocomotive();
 
     AOS.init({
       duration: 1300,
       once: false,
     });
-  }, []);
+  });
 
   return (
     <>

@@ -12,7 +12,7 @@ import {
 import { BsBootstrapFill } from "react-icons/bs";
 import Showcase from "../showcase/Showcase";
 
-export const Projects = () => {
+const Projects = () => {
   const projects = [
     {
       src: "/assets/projects/MySalak/logo.png",
@@ -180,3 +180,5 @@ export const Projects = () => {
     </div>
   );
 };
+
+export default Projects;

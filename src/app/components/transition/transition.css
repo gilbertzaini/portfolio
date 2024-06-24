@@ -1,13 +1,17 @@
 .transition-container {
-  /* background: linear-gradient(var(--bg-primary), var(--dark-color)) !important; */
-  background: linear-gradient(var(--bg-primary), var(--bg-secondary)) !important;
+  background: linear-gradient(
+    var(--bg-primary),
+    var(--bg-secondary)
+  ) !important;
   position: relative;
   height: 100vh;
 }
 
 .inverse {
-  /* background: linear-gradient(var(--dark-color), var(--bg-primary)) !important; */
-  background: linear-gradient(var(--bg-secondary), var(--bg-primary)) !important;
+  background: linear-gradient(
+    var(--bg-secondary),
+    var(--bg-primary)
+  ) !important;
 }
 
 .transition-container > div {
@@ -28,22 +32,67 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
-  font-size: 15vh;
+  padding-top: -5%;
 }
 
-.bar {
-  margin-top: -5%;
-  width: 100%;
-  height: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.box {
   background: var(--dark-color);
 }
 
+.box:first-child {
+  width: 10vh;
+  height: 10vh;
+}
+
+.box:nth-child(2) {
+  width: 40vh;
+  height: 40vh;
+}
+
+.box:nth-child(3){
+  width: 50vh;
+  height: 50vh;
+}
+
+.box:nth-child(4){
+  width: 35vh;
+  height: 35vh;
+}
+
+.box:nth-child(5){
+  width: 30vh;
+  height: 30vh;
+}
+
+.box:nth-child(6){
+  width: 10vh;
+  height: 10vh;
+}
+
+.box:nth-child(7){
+  width: 11vh;
+  height: 11vh;
+}
+
+.box:nth-child(8), .box:nth-child(10){
+  width: 7vh;
+  height: 7vh;
+}
+
+.box:nth-child(9){
+  width: 15vh;
+  height: 15vh;
+}
+
+/* .bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+/* 
 .bar > p {
   font-size: 8vh;
+  background: var(--dark-color);
   color: var(--bg-primary);
 }
 
@@ -105,4 +154,4 @@
 
 .bar:nth-child(15) {
   rotate: 180deg;
-}
+} */

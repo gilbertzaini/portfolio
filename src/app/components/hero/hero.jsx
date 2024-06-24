@@ -5,7 +5,7 @@ import Image from "next/image";
 import "./Hero.css";
 import Link from "next/link";
 
-export const Hero = () => {
+const Hero = () => {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
@@ -83,3 +83,5 @@ export const Hero = () => {
     </section>
   );
 };
+
+export default Hero;
