@@ -22,7 +22,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative p-5 sm:px-14 lg:px-20 container flex flex-col-reverse lg:flex-row justify-center lg:justify-around align-center">
+    <section className="relative p-5 sm:px-14 lg:px-20 container flex flex-col-reverse lg:flex-row justify-center lg:justify-around items-center">
       <button
         id="dark-mode-button"
         className="z-10 rounded-full w-10 h-10 absolute top-10 right-10 lg:right-5"

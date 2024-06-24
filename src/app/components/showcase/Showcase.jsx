@@ -14,8 +14,8 @@ const Showcase = (data) => {
 
   return (
     <section>
-      <div className="showcase-container flex flex-col lg:flex-row align-center justify-center">
-        <div className="showcase-slider h-full w-full lg:w-9/12 rounded-xl flex align-center">
+      <div className="showcase-container flex flex-col lg:flex-row items-center justify-center">
+        <div className="showcase-slider h-full w-full lg:w-9/12 rounded-xl flex items-center">
           <div
             data-aos="zoom-out"
             className="showcase-swiper-logo hidden lg:block"
@@ -65,11 +65,11 @@ const Showcase = (data) => {
         <div className="showcase-right-bar flex flex-col h-full mb-3 lg:mb-0 lg:h-5/6 lg:py-5 w-full lg:w-3/12">
           <div className="ps-7 pt-5 lg:pt-0 pe-3 lg:mb-3">
             <h4 className="text-2xl pb-1">{items[selected].heading}</h4>
-            <div className="flex justify-between align-center">
+            <div className="flex justify-between items-center">
               <h5 className="text-sm lg:text-base">
                 {items[selected].position}
               </h5>
-              <div className="showcase-period flex align-center px-2 lg:px-3">
+              <div className="showcase-period flex items-center px-2 lg:px-3">
                 <p className="text-xs my-auto">{items[selected].period}</p>
               </div>
             </div>
@@ -106,7 +106,7 @@ const Showcase = (data) => {
           </Swiper>
 
           <div className="showcase-desc ps-7 pe-3 pt-3 lg:pt-5 w-full h-auto">
-            <div className="showcase-stack flex  align-center gap-3">
+            <div className="showcase-stack flex  items-center gap-3">
               {items[selected].stack.map((item, index) => (
                 <div className="stack-wrapper text-xl lg:text-3xl" key={index}>
                   {item}
