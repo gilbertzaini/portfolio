@@ -54,14 +54,22 @@ export const Hero = () => {
             </Link>
           </button>
           <button id="resumeButton" className="flex items-center">
-            <span className="me-1">
+            <Link
+              href={"/Gilbert Zaini_Resume.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
               <MdOutlineFileDownload />
-            </span>
-            Resume
+              Resume
+            </Link>
           </button>
         </div>
       </div>
-      <div id="avatar" className="lg:me-5 relative flex justify-center items-center">
+      <div
+        id="avatar"
+        className="lg:me-5 relative flex justify-center items-center"
+      >
         <div className="w-96 h-96 relative">
           <Image
             src={"/assets/avatar.png"}
