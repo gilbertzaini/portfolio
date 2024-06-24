@@ -18,10 +18,10 @@ const Transition = ({ text, inverse }) => {
       <div>
         {/* top left */}
         <div className="box rotate-45 absolute top-0 left-6" />
-        <div className="box rotate-45 absolute -top-44 left-40" />
+        <div className="box rotate-45 absolute -top-20 left-16" />
 
         {/* mid right */}
-        <div className="box rotate-45 absolute top-36 -right-56" />
+        <div className="hidden lg:block box rotate-45 absolute top-36 -right-56" />
 
         {/* bot left */}
         <div className="box rotate-45 absolute -bottom-44 left-64" />
@@ -29,12 +29,12 @@ const Transition = ({ text, inverse }) => {
         <div className="box rotate-45 absolute bottom-56 -left-5" />
 
         {/* top right */}
-        <div className="box rotate-45 absolute top-7 right-10"/>
+        <div className="hidden lg:block box rotate-45 absolute -top-10 right-5" />
 
         {/* bot right */}
-        <div className="box rotate-45 absolute bottom-2 right-64"/>
-        <div className="box rotate-45 absolute bottom-10 right-36"/>
-        <div className="box rotate-45 absolute bottom-2 right-24"/>
+        <div className="hidden lg:block box rotate-45 absolute -bottom-10 right-14" />
+        <div className="hidden lg:block box rotate-45 absolute bottom-10 right-36" />
+        {/* <div className="hidden lg:block box rotate-45 absolute -bottom-10 right-56" /> */}
       </div>
     </section>
   );
