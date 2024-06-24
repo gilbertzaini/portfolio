@@ -160,8 +160,8 @@ const Skills = () => {
 
   return (
     <section>
-      <h1 className="text-center my-5">Skills</h1>
-      <div className="logo-container flex lg:flex-col flex-wrap justify-around items-center gap-8 px-5 sm:px-14">
+      {/* <h1 className="text-center my-5">Skills</h1> */}
+      <div className="logo-container h-full flex lg:flex-col flex-wrap justify-around items-center gap-8 px-5 sm:px-14 py-20">
         {isMobile ? (
           <>
             {skillItems.map((item, index) => (
