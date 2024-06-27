@@ -15,11 +15,8 @@ const Showcase = (data) => {
   return (
     <section>
       <div className="showcase-container flex flex-col lg:flex-row items-center justify-center">
-        <div className="showcase-slider h-full w-full lg:w-9/12 rounded-xl flex items-center">
-          <div
-            data-aos="zoom-out"
-            className="showcase-swiper-logo hidden lg:block"
-          >
+        <div className="showcase-slider h-1/2 lg:h-full w-full lg:w-9/12 rounded-xl flex items-center">
+          <div className="showcase-swiper-logo hidden lg:block">
             <Image
               src={items[selected].src}
               alt={items[selected].heading}
@@ -61,21 +58,25 @@ const Showcase = (data) => {
             ))}
           </Swiper>
         </div>
-
-        <div className="showcase-right-bar flex flex-col h-full mb-3 lg:mb-0 lg:h-5/6 lg:py-5 w-full lg:w-3/12">
-          <div className="ps-7 pt-5 lg:pt-0 pe-3 lg:mb-3">
-            <h4 className="text-2xl pb-1">{items[selected].heading}</h4>
+        <div className="showcase-right-bar flex flex-col lg:mb-0 h-1/2 lg:h-5/6 w-full lg:w-3/12">
+          {/* title */}
+          <div className="px-7 pt-3 md:pt-5 lg:pe-3 h-1/6">
+            <h4 className="text-xl md:text-xl pb-1">
+              {items[selected].heading}
+            </h4>
             <div className="flex justify-between items-center">
-              <h5 className="text-sm lg:text-base">
+              <h5 className="text-xs xl:text-sm whitespace-nowrap">
                 {items[selected].position}
               </h5>
-              <div className="showcase-period flex items-center px-2 lg:px-3">
+              <div className="showcase-period flex items-center px-2 lg:py-1 whitespace-nowrap">
                 <p className="text-xs my-auto">{items[selected].period}</p>
               </div>
             </div>
           </div>
+
+          {/* option */}
           <Swiper
-            className="showcase-option w:1/2 lg:w-full h-1/6 mt-2 lg:mt-0"
+            className="showcase-option w:1/2 lg:w-full h-1/6 lg:h-1/6 md:-mt-5 mb-1"
             slidesPerView={2.5}
             spaceBetween={20}
             slidesOffsetBefore={5}
@@ -105,15 +106,17 @@ const Showcase = (data) => {
             ))}
           </Swiper>
 
-          <div className="showcase-desc ps-7 pe-3 pt-3 lg:pt-5 w-full h-auto">
-            <div className="showcase-stack flex  items-center gap-3">
+          <div className="relative showcase-desc px-7 pb-8 lg:pe-3 w-full h-4/6">
+            {/* stack */}
+            <div className="h-1/6 showcase-stack flex items-center gap-3">
               {items[selected].stack.map((item, index) => (
                 <div className="stack-wrapper text-xl lg:text-3xl" key={index}>
                   {item}
                 </div>
               ))}
             </div>
-            <div className="showcase-detail text-xs lg:text-base text-justify pe-5 mt-5 ">
+            {/* detail */}
+            <div className="h-5/6 showcase-detail text-xs md:text-sm lg:text-base text-justify pe-5 mt-5">
               {items[selected].text}
             </div>
           </div>

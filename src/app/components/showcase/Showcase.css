@@ -46,6 +46,7 @@
   border-radius: 12px 0 0 12px;
   box-shadow: 0px 0px 10px 2px var(--dark-color);
   margin: auto;
+  position: relative;
 }
 
 .dark-mode .showcase-right-bar {
@@ -77,6 +78,7 @@
 .showcase-option-item img {
   transition: 0.3s ease;
 }
+
 .showcase-option-item:hover img {
   transform: scale(1.05);
 }
@@ -89,7 +91,6 @@
 }
 
 .showcase-detail {
-  height: 45vh;
   overflow-y: auto;
 }
 
@@ -99,7 +100,8 @@
 }
 
 @media screen and (max-width: 48rem) {
-  .showcase-detail {
-    height: 22vh;
+  .showcase-right-bar {
+    border-radius: 0;
+    box-shadow: 0px 0px 10px 0.2px var(--dark-color);
   }
 }
