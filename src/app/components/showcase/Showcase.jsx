@@ -68,7 +68,7 @@ const Showcase = (data) => {
               <h5 className="text-xs xl:text-sm whitespace-nowrap">
                 {items[selected].position}
               </h5>
-              <div className="showcase-period flex items-center px-2 lg:py-1 whitespace-nowrap">
+              <div className="showcase-period flex items-center px-2 whitespace-nowrap">
                 <p className="text-xs my-auto">{items[selected].period}</p>
               </div>
             </div>
