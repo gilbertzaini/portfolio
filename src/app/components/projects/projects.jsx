@@ -10,7 +10,7 @@ import {
   SiTensorflow,
 } from "react-icons/si";
 import { BsBootstrapFill } from "react-icons/bs";
-import Showcase from "../showcase/Showcase";
+import Showcase from "../showcase/showcase";
 
 const Projects = () => {
   const projects = [

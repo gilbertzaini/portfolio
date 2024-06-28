@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { MdDarkMode, MdOutlineFileDownload } from "react-icons/md";
 import Image from "next/image";
-import "./Hero.css";
+import "./hero.css";
 import Link from "next/link";
 import { ReactTyped } from "react-typed";
 

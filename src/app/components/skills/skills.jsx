@@ -24,7 +24,7 @@ import {
 import { TbSql } from "react-icons/tb";
 import { BsBootstrapFill } from "react-icons/bs";
 import PythonLogo from "../icons/python-logo.svg";
-import "./Skills.css";
+import "./skills.css";
 import Image from "next/image";
 
 const Skills = () => {

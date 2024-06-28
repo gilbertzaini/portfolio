@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./Transition.css";
+import "./transition.css";
 
 const Transition = ({ text, inverse }) => {
   return (
