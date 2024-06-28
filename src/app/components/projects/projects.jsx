@@ -27,7 +27,7 @@ const Projects = () => {
             traning, and the PWA development. In this project, I:
           </p>
           <ul>
-            <li> Designed the initial IoT’s schematic diagram </li>
+            <li> Designed the initial IoT&#39;s schematic diagram </li>
             <li> Took part in farm mapping using drone </li>
             <li> Labelled the drone dataset </li>
             <li>
@@ -154,7 +154,7 @@ const Projects = () => {
             </li>
             <li>Transactions</li>
             <li>
-              Reports on each of the customer's account (can be filtered by a
+              Reports on each of the customer&#39;s account (can be filtered by a
               range of date)
             </li>
             <li>Report export</li>

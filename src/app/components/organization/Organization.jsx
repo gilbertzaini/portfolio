@@ -14,7 +14,8 @@ const Organization = () => {
           <p>
             Serah Tahunan is an event organized by the Student Executive Board
             (BEM) to facilitate the transition of leadership roles among core
-            members within various student activity units. As a lead web developer, I:
+            members within various student activity units. As a lead web
+            developer, I:
           </p>
           <ul>
             <li>
@@ -26,10 +27,10 @@ const Organization = () => {
               other division
             </li>
             <li>
-              {" "}
               Distributed the workload to the team members based on the
-              individual’s ability{" "}
+              individual&#39;s ability
             </li>
+
             <li>Developed the voting form and its related APIs</li>
             <li>
               {" "}
@@ -54,16 +55,14 @@ const Organization = () => {
       period: "Mar - Nov 2023",
       text: (
         <>
-        <p>Mr. & Ms. UMN is an annual event held by Multimedia Nusantara University that involves the selection of university ambassadors. As a web developer, I:</p>
-        <ul>
-            <li>
-              {" "}
-              Developed sponsor and media partner pages layout{" "}
-            </li>
-            <li>
-              {" "}
-              Developed "Meet Our Candidates" section{" "}
-            </li>
+          <p>
+            Mr. & Ms. UMN is an annual event held by Multimedia Nusantara
+            University that involves the selection of university ambassadors. As
+            a web developer, I:
+          </p>
+          <ul>
+            <li> Developed sponsor and media partner pages layout </li>
+            <li> Developed &quot;Meet Our Candidates&quot; section </li>
             <li>Developed the Gallery template </li>
           </ul>
         </>
