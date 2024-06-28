@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from "react";
 import { FaAngular } from "react-icons/fa6";
 import { BsBootstrapFill } from "react-icons/bs";
@@ -33,7 +32,12 @@ const Experiences = () => {
       ),
       position: "Web Developer Intern",
       period: "Feb - Jun 2024",
-      stack: [<FaAngular />, <BsBootstrapFill />, <SiExpress />, <SiMysql />],
+      stack: [
+        <FaAngular key={"angular"} />,
+        <BsBootstrapFill key={"Bootstrap"} />,
+        <SiExpress key={"express"}/>,
+        <SiMysql key={"sql"}/>,
+      ],
       screenshots: [
         "/assets/experiences/kcg/1.png",
         "/assets/experiences/kcg/2.png",

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from "react";
 import { FaReact } from "react-icons/fa6";
 import { SiChakraui, SiExpress, SiMysql, SiNextdotjs } from "react-icons/si";
@@ -42,7 +41,7 @@ const Organization = () => {
       ),
       position: "Lead Web Developer",
       period: "May - Dec 2023",
-      stack: [<FaReact />, <SiChakraui />, <SiExpress />, <SiMysql />],
+      stack: [<FaReact key={"react"}/>, <SiChakraui key={"chakra"}/>, <SiExpress key={"express"}/>, <SiMysql key={"sql"}/>],
       screenshots: [
         "/assets/organizations/stukm/1.png",
         "/assets/organizations/stukm/2.png",
@@ -68,7 +67,7 @@ const Organization = () => {
         </>
       ),
       position: "Front-end Developer",
-      stack: [<SiNextdotjs />, <SiChakraui />],
+      stack: [<SiNextdotjs key={"next"}/>, <SiChakraui key={"chakra"}/>],
       screenshots: [
         "/assets/organizations/mrms/1.png",
         "/assets/organizations/mrms/2.png",

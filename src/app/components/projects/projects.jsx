@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from "react";
 import { FaLaravel, FaReact } from "react-icons/fa6";
 import {
@@ -40,7 +39,11 @@ const Projects = () => {
       ),
       position: "Software Developer",
       period: "Jan 2024 - Present",
-      stack: [<FaReact />, <SiChakraui />, <SiTensorflow />],
+      stack: [
+        <FaReact key={"react"} />,
+        <SiChakraui key={"chakra"} />,
+        <SiTensorflow key={"tensorflow"} />,
+      ],
       screenshots: [
         "/assets/projects/MySalak/1.jpeg",
         "/assets/projects/MySalak/2.jpeg",
@@ -76,7 +79,7 @@ const Projects = () => {
       ),
       position: "Back-end Developer",
       period: "Nov 2023 - Jan 2024",
-      stack: [<SiFlask />],
+      stack: [<SiFlask key={"flask"} />],
       screenshots: [
         "/assets/projects/NemaApp/1.png",
         "/assets/projects/NemaApp/2.png",
@@ -118,11 +121,11 @@ const Projects = () => {
       position: "Full Stack IoT Developer",
       period: "Sep - Dec 2023",
       stack: [
-        <SiArduino />,
-        <FaReact />,
-        <SiChakraui />,
-        <SiExpress />,
-        <SiMysql />,
+        <SiArduino key={"arduino"} />,
+        <FaReact key={"react"} />,
+        <SiChakraui key={"chakra"} />,
+        <SiExpress key={"express"} />,
+        <SiMysql key={"sql"} />,
       ],
       screenshots: [
         "/assets/projects/DiTag/1.png",
@@ -154,8 +157,8 @@ const Projects = () => {
             </li>
             <li>Transactions</li>
             <li>
-              Reports on each of the customer&#39;s account (can be filtered by a
-              range of date)
+              Reports on each of the customer&#39;s account (can be filtered by
+              a range of date)
             </li>
             <li>Report export</li>
           </ul>
@@ -163,7 +166,11 @@ const Projects = () => {
       ),
       position: "Full Stack Developer",
       period: "Jun - Nov 2023",
-      stack: [<FaLaravel />, <BsBootstrapFill />, <SiMysql />],
+      stack: [
+        <FaLaravel key={"laravel"} />,
+        <BsBootstrapFill key={"bootstrap"} />,
+        <SiMysql key={"sql"} />,
+      ],
       screenshots: [
         "/assets/projects/SIKEBAS/1.png",
         "/assets/projects/SIKEBAS/2.png",
