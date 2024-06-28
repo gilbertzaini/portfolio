@@ -4,9 +4,12 @@ import { MdDarkMode, MdOutlineFileDownload } from "react-icons/md";
 import Image from "next/image";
 import "./Hero.css";
 import Link from "next/link";
+import TextTransition, { presets } from "react-text-transition";
 
 const Hero = () => {
   const [dark, setDark] = useState(false);
+  const [index, setIndex] = useState(0);
+  const texts = ["Web Developer", "Software Developer", "IoT Engineer"];
 
   useEffect(() => {
     if (dark) {
@@ -21,8 +24,15 @@ const Hero = () => {
     console.log("clicked");
   };
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex(index => index === 2 ? 0 : index + 1);
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, []);
+  
   return (
-    <section className="relative p-5 sm:px-14 lg:px-20 container flex flex-col-reverse lg:flex-row justify-center lg:justify-around items-center">
+    <section className="relative p-5 sm:px-14 lg:px-20 container flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center">
       <button
         id="dark-mode-button"
         className="z-10 rounded-full w-10 h-10 absolute top-10 right-10 lg:right-5"
@@ -37,7 +47,14 @@ const Hero = () => {
         <h3 className="text-2xl lg:text-5xl">Hi!</h3>
         <h1 className="text-3xl lg:text-6xl">I'm Gilbert Zaini</h1>
         <h3 className="text-2xl lg:text-5xl">
-          And I'm a <strong>Web Developer</strong>
+          {/* {"And I'm a" + (index === 2 ? "n\xa0" : "\xa0")} */}
+          And I'm a {" "}
+          <strong>
+            {/* <TextTransition direction={"down"} inline={true} springConfig={presets.stiff}>
+              {texts[index]}
+            </TextTransition> */}
+            Web Developer
+          </strong>
         </h3>
         <div id="resume" className="flex items-center gap-x-5">
           <button className="icons-btn">
@@ -70,7 +87,7 @@ const Hero = () => {
         id="avatar"
         className="lg:me-5 relative flex justify-center items-center"
       >
-        <div className="w-96 h-96 relative">
+        <div className="w-72 h-72 mb-10 lg:mb-0 md:h-96 md:w-96 relative">
           <Image
             src={"/assets/avatar.png"}
             alt="avatar"
