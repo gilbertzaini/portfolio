@@ -4,9 +4,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import Hero from "./components/hero/hero";
-import Projects from "./components/projects/Projects";
-import Skills from "./components/skills/Skills";
-import Transition from "./components/transition/Transition";
+import Projects from "./components/projects/projects";
+import Skills from "./components/skills/skills";
+import Transition from "./components/transition/transition";
 import Experiences from "./components/experiences/Experiences";
 import Organization from "./components/organization/Organization";
 
