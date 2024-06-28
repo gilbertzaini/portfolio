@@ -8,4 +8,5 @@
 * Swiper (https://github.com/nolimits4web/swiper)
 
 ## Additional notes
+* Check the portfolio here (https://portfolio-gilbertzainis-projects.vercel.app/)
 * Landscape mobile view hasn't been optimized as of now
