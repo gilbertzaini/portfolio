@@ -2,7 +2,7 @@ import React from "react";
 import { FaAngular } from "react-icons/fa6";
 import { BsBootstrapFill } from "react-icons/bs";
 import { SiExpress, SiFlask, SiMysql } from "react-icons/si";
-import Showcase from "../showcase/showcase";
+import Showcase from "../showcase/Showcase";
 
 const Experiences = () => {
   const experiences = [
