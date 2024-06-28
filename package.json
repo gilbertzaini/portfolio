@@ -11,7 +11,6 @@
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
     "aos": "^2.3.4",
-    "framer-motion": "^11.0.28",
     "locomotive-scroll": "^5.0.0-beta.11",
     "next": "14.2.1",
     "react": "^18",
