@@ -169,7 +169,7 @@ const Projects = () => {
         "/assets/projects/SIKEBAS/3.png",
         "/assets/projects/SIKEBAS/4.png",
         "/assets/projects/SIKEBAS/5.png",
-        "/assets/projects/SIKEBAS/5.png",
+        "/assets/projects/SIKEBAS/6.png",
       ],
     },
   ];
