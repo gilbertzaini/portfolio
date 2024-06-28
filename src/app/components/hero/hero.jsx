@@ -4,12 +4,10 @@ import { MdDarkMode, MdOutlineFileDownload } from "react-icons/md";
 import Image from "next/image";
 import "./Hero.css";
 import Link from "next/link";
-import TextTransition, { presets } from "react-text-transition";
+import { ReactTyped } from "react-typed";
 
 const Hero = () => {
   const [dark, setDark] = useState(false);
-  const [index, setIndex] = useState(0);
-  const texts = ["Web Developer", "Software Developer", "IoT Engineer"];
 
   useEffect(() => {
     if (dark) {
@@ -24,13 +22,6 @@ const Hero = () => {
     console.log("clicked");
   };
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndex(index => index === 2 ? 0 : index + 1);
-    }, 3000);
-    return () => clearInterval(intervalId);
-  }, []);
-  
   return (
     <section className="relative p-5 sm:px-14 lg:px-20 container flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center">
       <button
@@ -47,13 +38,17 @@ const Hero = () => {
         <h3 className="text-2xl lg:text-5xl">Hi!</h3>
         <h1 className="text-3xl lg:text-6xl">I'm Gilbert Zaini</h1>
         <h3 className="text-2xl lg:text-5xl">
-          {/* {"And I'm a" + (index === 2 ? "n\xa0" : "\xa0")} */}
-          And I'm a {" "}
+          And I'm a{" "}
           <strong>
-            {/* <TextTransition direction={"down"} inline={true} springConfig={presets.stiff}>
-              {texts[index]}
-            </TextTransition> */}
-            Web Developer
+            {/* Web Developer */}
+            <ReactTyped
+              loop
+              backSpeed={50}
+              typeSpeed={50}
+              strings={["Web Developer", "IoT Engineer", "Software Developer"]}
+              backDelay={2500}
+              showCursor={false}
+            />
           </strong>
         </h3>
         <div id="resume" className="flex items-center gap-x-5">
