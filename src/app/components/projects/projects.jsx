@@ -130,6 +130,7 @@ const Projects = () => {
         "/assets/projects/DiTag/3.png",
         "/assets/projects/DiTag/4.jpeg",
         "/assets/projects/DiTag/5.jpeg",
+        "/assets/projects/DiTag/6.jpeg",
       ],
     },
     {
