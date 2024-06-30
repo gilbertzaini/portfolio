@@ -34,7 +34,7 @@ const Hero = () => {
         <MdDarkMode />
       </button>
 
-      <div id="description" className="flex flex-col justify-center pl-5 gap-5">
+      <div id="description" className="flex self-start lg:self-auto flex-col justify-center pl-5 gap-5">
         <h3 className="text-2xl lg:text-5xl">Hi!</h3>
         <h1 className="text-3xl lg:text-6xl">I&#39;m Gilbert Zaini</h1>
         <h3 className="text-2xl lg:text-5xl">
