@@ -35,7 +35,7 @@ export default function Home() {
       duration: 1300,
       once: false,
     });
-  });
+  }), [];
 
   return (
     <>
