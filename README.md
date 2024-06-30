@@ -1,4 +1,4 @@
-# This <a href="gilbert-zaini-portfolio.vercel.app">portfolio</a> is made with Next.js 14.2.1 along with Tailwind.
+# This <a target="_blank" href="https://gilbert-zaini-portfolio.vercel.app">portfolio</a> is made with Next.js 14.2.1 along with Tailwind.
 
 ## Special thanks to
 * AOS (https://github.com/michalsnik/aos)
