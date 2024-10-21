@@ -9,6 +9,7 @@ import {
   FaAngular,
   FaGithub,
   FaPython,
+  FaDocker,
 } from "react-icons/fa6";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import {
@@ -124,6 +125,11 @@ const Skills = () => {
     {
       logo: <SiChakraui fill="#60c9ca" />,
       name: "ChakraUI",
+      category: "Additional",
+    },
+    {
+      logo: <FaDocker fill="#1e63ee" />,
+      name: "Docker",
       category: "Additional",
     },
     // {
