@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLaravel, FaReact } from "react-icons/fa6";
+import { FaDocker, FaLaravel, FaReact } from "react-icons/fa6";
 import {
   SiArduino,
   SiChakraui,
@@ -10,6 +10,7 @@ import {
 } from "react-icons/si";
 import { BsBootstrapFill } from "react-icons/bs";
 import Showcase from "../showcase/Showcase";
+import { TbSql } from "react-icons/tb";
 
 const Projects = () => {
   const projects = [
@@ -19,21 +20,38 @@ const Projects = () => {
       text: (
         <>
           <p>
-            MySalak is a part of Epics in IEEE 2024 project, which is aimed to
-            help snakefruit farmers, especially they who are affiliated with
+            <a href="https://mysalak.com" target="_blank" className="text-cyan-400">MySalak</a> is a part of Epics in IEEE 2024 project, which is aimed to
+            help snakefruit farmers, especially those who are affiliated with
             Paguyuban Mitra Turindo. This project involves various process,
             starting from the IoT development, dataset collection, AI model
             traning, and the PWA development. In this project, I:
           </p>
           <ul>
-            <li> Designed the initial IoT&#39;s schematic diagram </li>
-            <li> Took part in farm mapping using drone </li>
-            <li> Labelled the drone dataset </li>
             <li>
               {" "}
               Developed the front-end of MySalak PWA with React and ChakraUI{" "}
             </li>
-            <li> Integrated the AI Model with TensorFlowJs </li>
+            <li>
+              Developed the back-end server with Express.js, Sequelize, and
+              MySQL
+            </li>
+            <li>
+              {" "}
+              Developed a Flask back-end to enable access to multiple ML models
+            </li>
+            <li>
+              {" "}
+              Dockerized the services of MySalak and handled the deployment with
+              a VPS{" "}
+            </li>
+            <li> Supervise the progress of MySalak website development </li>
+            <li>
+              Perform QC on committed codes before continuing into the
+              deployment
+            </li>
+            <li> Took part in spatial area mapping using drone </li>
+            <li> Labelled the drone dataset </li>
+            <li> Trained an image segmentation model with UNet++</li>
           </ul>
         </>
       ),
@@ -42,14 +60,19 @@ const Projects = () => {
       stack: [
         <FaReact key={"react"} />,
         <SiChakraui key={"chakra"} />,
-        <SiTensorflow key={"tensorflow"} />,
+        // <SiTensorflow key={"tensorflow"} />,
+        <SiExpress key={"express"}/>,
+        <SiFlask key={"flask"}/>,
+        <FaDocker key={"docker"}/>,
+        <SiMysql key={"mysql"}/>
       ],
       screenshots: [
-        "/assets/projects/MySalak/1.jpeg",
-        "/assets/projects/MySalak/2.jpeg",
-        "/assets/projects/MySalak/3.jpeg",
-        "/assets/projects/MySalak/4.jpeg",
-        "/assets/projects/MySalak/5.jpeg",
+        "/assets/projects/MySalak/1.jpg",
+        "/assets/projects/MySalak/2.jpg",
+        "/assets/projects/MySalak/3.jpg",
+        "/assets/projects/MySalak/4.jpg",
+        "/assets/projects/MySalak/5.jpg",
+        "/assets/projects/MySalak/6.jpg",
       ],
     },
     {
