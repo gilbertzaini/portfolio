@@ -40,15 +40,15 @@ const Hero = () => {
         <h3 className="text-2xl lg:text-5xl">
           And I&#39;m a{" "}
           <strong>
-            {/* Web Developer */}
-            <ReactTyped
+            Software Developer
+            {/* <ReactTyped
               loop
               backSpeed={50}
               typeSpeed={50}
               strings={["Web Developer", "IoT Engineer", "Software Developer"]}
               backDelay={2500}
               showCursor={false}
-            />
+            /> */}
           </strong>
         </h3>
         <div id="resume" className="flex items-center gap-x-5">
@@ -84,10 +84,11 @@ const Hero = () => {
       >
         <div className="w-72 h-72 mb-10 lg:mb-0 md:h-96 md:w-96 relative">
           <Image
-            src={"/assets/avatar.png"}
+            // src={"/assets/avatar.png"}
+            src={"/assets/profile.png"}
             alt="avatar"
             fill="true"
-            style={{ objectFit: "contain", borderRadius: "50%" }}
+            style={{ objectFit: "cover", borderRadius: "50%" }}
           />
         </div>
         {/* <img src='../../assets/avatar.png' alt="avatar" /> */}
