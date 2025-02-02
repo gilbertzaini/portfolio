@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     async function getLocomotive() {
-      console.log("importing...");
+      // console.log("importing...");
       const Locomotive = (await import("locomotive-scroll")).default;
       const scroll = new Locomotive({
         el: document.querySelector("[data-scroll-container]"),
@@ -26,7 +26,7 @@ export default function Home() {
           smooth: true,
         }
       });
-      console.log("get");
+      // console.log("get");
     }
 
     getLocomotive();
