@@ -11,7 +11,7 @@ const Transition = ({ text, inverse }) => {
       <h1
         className="w-full h-full flex justify-center items-center text-5xl lg:text-9xl"
         data-scroll
-        data-scroll-speed="-1"
+        data-scroll-speed="-0.4"
       >
         {text}
       </h1>
