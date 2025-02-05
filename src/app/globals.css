@@ -61,6 +61,7 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
+  font-family: var(--font-poppins);
 }
 
 body::-webkit-scrollbar {
@@ -156,3 +157,8 @@ ul {
   background: var(--accent-color);
 }
 
+@media screen and (min-width: 48rem) {
+  ul {
+    padding-left: 2%;
+  }
+}
