@@ -9,9 +9,9 @@ const Transition = ({ text, inverse }) => {
       className={`transition-container ${inverse ? "inverse" : ""}`}
     >
       <h1
-        className="w-full h-full flex justify-center items-center text-5xl lg:text-9xl"
+        className="font-montserrat w-full h-full flex justify-center items-center text-5xl lg:text-9xl"
         data-scroll
-        data-scroll-speed="-0.4"
+        data-scroll-speed="-1"
       >
         {text}
       </h1>
