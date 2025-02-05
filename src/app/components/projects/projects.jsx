@@ -6,11 +6,13 @@ import {
   SiExpress,
   SiFlask,
   SiMysql,
+  SiPytorch,
   SiTensorflow,
 } from "react-icons/si";
 import { BsBootstrapFill } from "react-icons/bs";
 import Showcase from "../showcase/Showcase";
 import { TbSql } from "react-icons/tb";
+import SectionTemplate from "../sectionTemplate/SectionTemplate";
 
 const Projects = () => {
   const projects = [
@@ -20,38 +22,48 @@ const Projects = () => {
       text: (
         <>
           <p>
-            <a href="https://mysalak.com" target="_blank" className="text-cyan-400">MySalak</a> is a part of Epics in IEEE 2024 project, which is aimed to
-            help snakefruit farmers, especially those who are affiliated with
+            <a
+              href="https://mysalak.com"
+              target="_blank"
+              className="text-cyan-400"
+            >
+              MySalak
+            </a>{" "}
+            is a part of Epics in IEEE 2024 project, which is aimed to help
+            snakefruit farmers, especially those who are affiliated with
             Paguyuban Mitra Turindo. This project involves various process,
             starting from the IoT development, dataset collection, AI model
             traning, and the PWA development. In this project, I:
           </p>
           <ul>
+            <li> Mapped the vegetation area with drones </li>
+            <li> Labelled the captured vegetation dataset </li>
+            <li> Trained an image segmentation model with UNet++ based on PyTorch</li>
             <li>
               {" "}
               Developed the front-end of MySalak PWA with React and ChakraUI{" "}
             </li>
             <li>
-              Developed the back-end server with Express.js, Sequelize, and
-              MySQL
+              Developed the back-end server with Express.js, Sequelize,
+              WebSocket, and MySQL
             </li>
             <li>
               {" "}
-              Developed a Flask back-end to enable access to multiple ML models
+              Integrated multiple weather prediction models and a YOLOv5 model
+              with a Flask back-end server
             </li>
+            <li>
+              {" "}
+              Implemented Leaflet with Polygons for vegetation area
+              visualization
+            </li>
+            <li>Handled the history visualization with ApexCharts</li>
+            <li>Implemented role-based authorization for admin pages</li>
             <li>
               {" "}
               Dockerized the services of MySalak and handled the deployment with
               a VPS{" "}
             </li>
-            <li> Supervise the progress of MySalak website development </li>
-            <li>
-              Perform QC on committed codes before continuing into the
-              deployment
-            </li>
-            <li> Took part in spatial area mapping using drone </li>
-            <li> Labelled the drone dataset </li>
-            <li> Trained an image segmentation model with UNet++</li>
           </ul>
         </>
       ),
@@ -60,11 +72,11 @@ const Projects = () => {
       stack: [
         <FaReact key={"react"} />,
         <SiChakraui key={"chakra"} />,
-        // <SiTensorflow key={"tensorflow"} />,
-        <SiExpress key={"express"}/>,
-        <SiFlask key={"flask"}/>,
-        <FaDocker key={"docker"}/>,
-        <SiMysql key={"mysql"}/>
+        <SiExpress key={"express"} />,
+        <SiFlask key={"flask"} />,
+        <SiPytorch key={"pytorch"}/>,
+        <FaDocker key={"docker"} />,
+        <SiMysql key={"mysql"} />,
       ],
       screenshots: [
         "/assets/projects/MySalak/1.jpg",
@@ -87,8 +99,8 @@ const Projects = () => {
             project, I:
           </p>
           <ul>
-            <li>Developed the application using Flask</li>
-            <li>Integrated the AI Model</li>
+            <li>Developed the application with Flask</li>
+            <li>Integrated both the parasitic and non-parasitic models</li>
             <li>
               Made bash scripts to install and run the application locally in
               MacOS
@@ -116,28 +128,33 @@ const Projects = () => {
         <>
           <p>
             DiTag is an IoT tracking device assembled with ESP32, a GPS Module,
-            and a buzzer, with a battery as its power source. The device can
-            then be tracked using DiTag website, and a notification will be sent
-            if the device is more than 20m apart. The buzzer can be rang
-            remotely using the same website to locate the tagged item. In this
-            project, I:
+            and a buzzer, along with a battery as its power source. The device
+            can then be tracked on DiTag website, and a notification will be
+            sent if the device is more than 20m apart. The buzzer can be rang
+            remotely on the same website. In this project, I:
           </p>
           <ul>
             <li>Designed the hardware wiring</li>
-            <li> Took part in assembling the device</li>
-            <li> Programmed the ESP32</li>
-            <li> Developed the front-end using React.js and ChakraUI</li>
+            <li>Assembled the IoT device</li>
+            <li>Programmed the ESP32</li>
+            <li>Developed the front-end with React.js and ChakraUI</li>
             <li>
               {" "}
-              Developed the back-end using Express.js, Sequelize, MySQL, and
+              Developed the back-end with Express.js, Sequelize, MySQL, and
               WebSocket
+            </li>
+            <li>Handled the authentication with session-based system</li>
+            <li>Implemented account-based authorization</li>
+            <li>
+              Integrated Leaflet with Geolocation for precise mapping and
+              distance measurement
             </li>
             <li>
               {" "}
               Implemented MQTT communication protocol on both the website and
               the device
             </li>
-            <li> Deployed the webapp using cPanel</li>
+            <li> Deployed the webapp with cPanel</li>
           </ul>
         </>
       ),
@@ -172,18 +189,12 @@ const Projects = () => {
             features includes:
           </p>
           <ul>
-            <li>Log-in and authentication system</li>
-            <li>Role-based authorization</li>
+            <li>Developed the application with Laravel</li>
             <li>
-              CRUD on the waste list, customer list, administrator list, and
-              waste collectors list
+              Handled authentication and authorization with Laravel Breeze
             </li>
-            <li>Transactions</li>
-            <li>
-              Reports on each of the customer&#39;s account (can be filtered by
-              a range of date)
-            </li>
-            <li>Report export</li>
+            <li>Implemented CRUD on multiple data tables</li>
+            <li>Implemented export feature for all reports</li>
           </ul>
         </>
       ),
@@ -207,7 +218,7 @@ const Projects = () => {
 
   return (
     <div>
-      <Showcase data={projects} title={"Projects"} />{" "}
+      <SectionTemplate data={projects} title={"Projects"} />{" "}
     </div>
   );
 };

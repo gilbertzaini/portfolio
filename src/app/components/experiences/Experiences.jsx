@@ -1,11 +1,51 @@
 import React from "react";
-import { FaAngular } from "react-icons/fa6";
+import { FaAngular, FaPython } from "react-icons/fa6";
 import { BsBootstrapFill } from "react-icons/bs";
-import { SiExpress, SiFlask, SiMysql } from "react-icons/si";
+import {
+  SiExpress,
+  SiFlask,
+  SiJupyter,
+  SiMysql,
+  SiTensorflow,
+} from "react-icons/si";
 import Showcase from "../showcase/Showcase";
+import SectionTemplate from "../sectionTemplate/SectionTemplate";
 
 const Experiences = () => {
   const experiences = [
+    {
+      src: "/assets/experiences/umn/umn.png",
+      heading: "Universitas Multimedia Nusantara",
+      text: (
+        <>
+          <p>
+            As a laboratory assistant of Image Processing subject, I was tasked
+            to conduct laboratory sessions for the course, focusing on the
+            application of image processing techniques and development of
+            image-based machine learning models using Python, with Jupyter Lab
+            and Google Colab as its platform. The materials range from basic
+            image transformation, filters, morphology image processing, image
+            segmentation, feature detection and description, supervised learning
+            with KNN, unsupervised learning with K-Means Clustering, and
+            Tensorflow Keras-based CNN Models for Image Classification
+          </p>
+        </>
+      ),
+      position: "Laboratory Assistant",
+      period: "Aug 2024 - Jan 2025",
+      stack: [
+        <FaPython key={"python"} />,
+        <SiJupyter key={"jupyter"} />,
+        <SiTensorflow key={"tensorflow"} />,
+      ],
+      screenshots: [
+        "/assets/experiences/umn/1.png",
+        "/assets/experiences/umn/2.png",
+        "/assets/experiences/umn/3.png",
+        "/assets/experiences/umn/4.png",
+        "/assets/experiences/umn/5.png",
+      ],
+    },
     {
       src: "/assets/experiences/kcg/kcg.png",
       heading: "PT. Kurnia Ciptamoda Gemilang",
@@ -35,8 +75,8 @@ const Experiences = () => {
       stack: [
         <FaAngular key={"angular"} />,
         <BsBootstrapFill key={"Bootstrap"} />,
-        <SiExpress key={"express"}/>,
-        <SiMysql key={"sql"}/>,
+        <SiExpress key={"express"} />,
+        <SiMysql key={"sql"} />,
       ],
       screenshots: [
         "/assets/experiences/kcg/1.png",
@@ -51,7 +91,7 @@ const Experiences = () => {
 
   return (
     <div className="secondary-bg">
-      <Showcase data={experiences} title={"Experiences"} />
+      <SectionTemplate data={experiences} title={"Experiences"} />
     </div>
   );
 };

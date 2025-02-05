@@ -2,6 +2,7 @@ import React from "react";
 import { FaReact } from "react-icons/fa6";
 import { SiChakraui, SiExpress, SiMysql, SiNextdotjs } from "react-icons/si";
 import Showcase from "../showcase/Showcase";
+import SectionTemplate from "../sectionTemplate/SectionTemplate";
 
 const Organization = () => {
   const organizations = [
@@ -41,7 +42,12 @@ const Organization = () => {
       ),
       position: "Lead Web Developer",
       period: "May - Dec 2023",
-      stack: [<FaReact key={"react"}/>, <SiChakraui key={"chakra"}/>, <SiExpress key={"express"}/>, <SiMysql key={"sql"}/>],
+      stack: [
+        <FaReact key={"react"} />,
+        <SiChakraui key={"chakra"} />,
+        <SiExpress key={"express"} />,
+        <SiMysql key={"sql"} />,
+      ],
       screenshots: [
         "/assets/organizations/stukm/1.png",
         "/assets/organizations/stukm/2.png",
@@ -67,7 +73,7 @@ const Organization = () => {
         </>
       ),
       position: "Front-end Developer",
-      stack: [<SiNextdotjs key={"next"}/>, <SiChakraui key={"chakra"}/>],
+      stack: [<SiNextdotjs key={"next"} />, <SiChakraui key={"chakra"} />],
       screenshots: [
         "/assets/organizations/mrms/1.png",
         "/assets/organizations/mrms/2.png",
@@ -77,7 +83,7 @@ const Organization = () => {
 
   return (
     <div className="secondary-bg">
-      <Showcase data={organizations} title={"Organizations"} />{" "}
+      <SectionTemplate data={organizations} title={"Organizations"} />{" "}
     </div>
   );
 };
