@@ -39,9 +39,9 @@ export default function Home() {
     [];
 
   return (
-    <>
+    <div data-scroll-container>
       <Hero />
-      <Transition text={"EXPERIENCES"} />
+      <Transition text={"EXPERIENCES"} first={true}/>
       <Experiences />
       <Transition text={"PROJECTS"} inverse={true} />
       <Projects />
@@ -49,6 +49,6 @@ export default function Home() {
       <Organization />
       <Transition text={"SKILLS"} inverse={true} />
       <Skills />
-    </>
+    </div>
   );
 }

@@ -1,17 +1,48 @@
-import React, { useRef } from "react";
+import React, { useEffect } from "react";
 import "./transition.css";
 
-const Transition = ({ text, inverse }) => {
+const Transition = ({ text, inverse, first }) => {
+  // useEffect(() => {
+  //   // Function to update the data-scroll-offset based on screen size
+  //   const updateScrollOffset = () => {
+  //     const h1Element = document.querySelector("[data-scroll]");
+
+  //     if (window.innerWidth >= 1024) {
+  //       // For large screens (e.g., desktops), set a larger offset (e.g., 0.3)
+  //       h1Element.setAttribute("data-scroll-speed", "0");
+  //       h1Element.setAttribute("data-scroll-offset", "0");
+  //     } else {
+  //       // For small screens (e.g., mobile/tablets), set a smaller offset (e.g., 0.5)
+  //       h1Element.setAttribute("data-scroll-speed", "-1");
+  //       h1Element.setAttribute("data-scroll-offset", "0.5");
+  //     }
+  //   };
+
+  //   // Initial call to set the scroll offset
+  //   updateScrollOffset();
+
+  //   // Add an event listener to update on window resize
+  //   window.addEventListener("resize", updateScrollOffset);
+
+  //   // Clean up the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("resize", updateScrollOffset);
+  //   };
+  // }, []);
+
   return (
     <section
-      data-scroll-container
-      data-scroll
-      className={`transition-container ${inverse ? "inverse" : ""}`}
+      className={`transition-container ${inverse ? "inverse" : ""} relative`}
+      data-scroll-section
     >
       <h1
-        className="font-montserrat w-full h-full flex justify-center items-center text-5xl lg:text-9xl"
+        className={`font-montserrat text-5xl lg:text-9xl w-full h-full flex justify-center items-center relative 
+        ${first ? "cond-margin" : ""}`}
         data-scroll
-        data-scroll-speed="-1"
+        data-scroll-speed="-.5"
+        data-scroll-delay="1"
+        data-scroll-direction="vertical"
+        data-scroll-repeat
       >
         {text}
       </h1>

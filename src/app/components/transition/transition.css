@@ -88,3 +88,11 @@
   width: 7vh;
   height: 7vh;
 }
+
+
+/* Apply margin-top: -20% on large screens */
+@media (min-width: 1024px) {
+  .cond-margin {
+    margin-top: -16%;
+  }
+}
