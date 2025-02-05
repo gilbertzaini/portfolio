@@ -9,9 +9,9 @@ import Skills from "./components/skills/skills";
 import Transition from "./components/transition/transition";
 import Experiences from "./components/experiences/Experiences";
 import Organization from "./components/organization/Organization";
+import SectionTemplate from "./components/sectionTemplate/SectionTemplate";
 
 export default function Home() {
-
   useEffect(() => {
     async function getLocomotive() {
       // console.log("importing...");
@@ -24,7 +24,7 @@ export default function Home() {
         },
         tablet: {
           smooth: true,
-        }
+        },
       });
       // console.log("get");
     }
@@ -35,7 +35,8 @@ export default function Home() {
       duration: 1300,
       once: false,
     });
-  }), [];
+  }),
+    [];
 
   return (
     <>
