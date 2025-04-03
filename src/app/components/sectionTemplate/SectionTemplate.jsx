@@ -17,9 +17,11 @@ const SectionTemplate = (props) => {
       <div className="template-container flex items-center justify-between w-full">
         {/* Title */}
         <div className="template-title flex flex-col justify-between items-center w-1/12 h-full">
-          <div className="template-title-bar w-1/12 h-1/6 mx-auto"></div>
-          <h1 className="my-auto text-4xl font-montserrat">{title}</h1>
-          <div className="template-title-bar w-1/12 h-3/6 mx-auto"></div>
+          {/* <div className="template-title-bar w-1/12 h-1/6 mx-auto"></div> */}
+          <h1 className="hidden lg:block my-auto text-4xl font-montserrat">
+            {title}
+          </h1>
+          <div className="hidden lg:block template-title-bar w-1/12 h-3/6 mx-auto"></div>
         </div>
 
         <div className="flex flex-col lg:flex-row h-full w-11/12">
@@ -99,15 +101,13 @@ const SectionTemplate = (props) => {
             <div className="template-options w-full lg:w-3/6 h-1/2 lg:h-5/6 rounded-full flex lg:flex-col gap-5 lg:gap-10 px-2 lg:px-0 lg:py-5 items-center justify-center overflow-y-auto">
               {data.map((item, index) => (
                 <button
-                  className="relative template-options-item p-7 lg:p-10 rounded-full flex-none"
+                  className={`relative template-options-item p-7 lg:p-10 rounded-full flex-none transition-transform duration-200 ${
+                    selected === index ? "scale-110" : ""
+                  }`}
                   onClick={() => setSelected(index)}
                   key={index}
                 >
-                  <Image
-                    src={item.src}
-                    alt={item.heading}
-                    fill
-                  ></Image>
+                  <Image src={item.src} alt={item.heading} fill></Image>
                 </button>
               ))}
             </div>
