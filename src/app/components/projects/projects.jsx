@@ -4,9 +4,12 @@ import {
   SiArduino,
   SiChakraui,
   SiExpress,
+  SiFastapi,
   SiFlask,
+  SiJinja,
   SiMysql,
   SiPytorch,
+  SiTailwindcss,
   SiTensorflow,
 } from "react-icons/si";
 import { BsBootstrapFill } from "react-icons/bs";
@@ -16,6 +19,51 @@ import SectionTemplate from "../sectionTemplate/SectionTemplate";
 
 const Projects = () => {
   const projects = [
+    {
+      src: "/assets/projects/NemaAppV2/logo.png",
+      heading: "NemaAppV2",
+      text: (
+        <>
+          <p>
+            NemaApp is an Al-powered application for nematode identification
+            using microscopic images. This app is designed to assist
+            researchers, academics, and practitioners in agriculture and biology
+            in distinguishing between genus of parasitic nematodes and feeding
+            behavior of non-parasitic nematodes. In this project, I:
+          </p>
+          <ul>
+            <li>
+              Developed the application with FastApi, Jinja2, and Tailwind CSS
+            </li>
+            <li>
+              Integrated 3 computer vision models for nematode identification
+            </li>
+            <li>
+              Implemented pywebview to deliver a clean, native-like application
+              interface
+            </li>
+            <li>
+              Packaged the application with PyInstaller for both Windows and
+              MacOS
+            </li>
+          </ul>
+        </>
+      ),
+      position: "Full Stack Developer",
+      period: "Feb 2025 - March 2025",
+      stack: [
+        <SiFastapi key={"flask"} />,
+        <SiJinja key={"jinja"} />,
+        <SiTailwindcss key={"tailwindcss"} />,
+      ],
+      screenshots: [
+        "/assets/projects/NemaAppV2/1.png",
+        "/assets/projects/NemaAppV2/2.png",
+        "/assets/projects/NemaAppV2/3.png",
+        "/assets/projects/NemaAppV2/4.png",
+        "/assets/projects/NemaAppV2/5.png",
+      ],
+    },
     {
       src: "/assets/projects/MySalak/logo.png",
       heading: "MySalak",
@@ -38,7 +86,10 @@ const Projects = () => {
           <ul>
             <li> Mapped the vegetation area with drones </li>
             <li> Labelled the captured vegetation dataset </li>
-            <li> Trained an image segmentation model with UNet++ based on PyTorch</li>
+            <li>
+              {" "}
+              Trained an image segmentation model with UNet++ based on PyTorch
+            </li>
             <li>
               {" "}
               Developed the front-end of MySalak PWA with React and ChakraUI{" "}
@@ -74,7 +125,7 @@ const Projects = () => {
         <SiChakraui key={"chakra"} />,
         <SiExpress key={"express"} />,
         <SiFlask key={"flask"} />,
-        <SiPytorch key={"pytorch"}/>,
+        <SiPytorch key={"pytorch"} />,
         <FaDocker key={"docker"} />,
         <SiMysql key={"mysql"} />,
       ],
@@ -87,40 +138,40 @@ const Projects = () => {
         "/assets/projects/MySalak/6.jpg",
       ],
     },
-    {
-      src: "/assets/projects/NemaApp/logo.png",
-      heading: "NemaApp",
-      text: (
-        <>
-          <p>
-            NemaApp is a project that integrates an agriculture-based AI model
-            into a webapp to identify the species of a certain parasitic or
-            non-parasitic organism based on its microscopic image. In this
-            project, I:
-          </p>
-          <ul>
-            <li>Developed the application with Flask</li>
-            <li>Integrated both the parasitic and non-parasitic models</li>
-            <li>
-              Made bash scripts to install and run the application locally in
-              MacOS
-            </li>
-            <li>
-              Made batch scripts to install and run the application locally in
-              Windows
-            </li>
-          </ul>
-        </>
-      ),
-      position: "Back-end Developer",
-      period: "Nov 2023 - Jan 2024",
-      stack: [<SiFlask key={"flask"} />],
-      screenshots: [
-        "/assets/projects/NemaApp/1.png",
-        "/assets/projects/NemaApp/2.png",
-        "/assets/projects/NemaApp/3.png",
-      ],
-    },
+    // {
+    //   src: "/assets/projects/NemaApp/logo.png",
+    //   heading: "NemaApp",
+    //   text: (
+    //     <>
+    //       <p>
+    //         NemaApp is a project that integrates an agriculture-based AI model
+    //         into a webapp to identify the species of a certain parasitic or
+    //         non-parasitic organism based on its microscopic image. In this
+    //         project, I:
+    //       </p>
+    //       <ul>
+    //         <li>Developed the application with Flask</li>
+    //         <li>Integrated both the parasitic and non-parasitic models</li>
+    //         <li>
+    //           Made bash scripts to install and run the application locally in
+    //           MacOS
+    //         </li>
+    //         <li>
+    //           Made batch scripts to install and run the application locally in
+    //           Windows
+    //         </li>
+    //       </ul>
+    //     </>
+    //   ),
+    //   position: "Back-end Developer",
+    //   period: "Nov 2023 - Jan 2024",
+    //   stack: [<SiFlask key={"flask"} />],
+    //   screenshots: [
+    //     "/assets/projects/NemaApp/1.png",
+    //     "/assets/projects/NemaApp/2.png",
+    //     "/assets/projects/NemaApp/3.png",
+    //   ],
+    // },
     {
       src: "/assets/projects/DiTag/logo.png",
       heading: "DiTag",
